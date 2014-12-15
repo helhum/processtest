@@ -10,20 +10,20 @@ echo 'No cwd:' . LF;
 $process1 = new \Symfony\Component\Process\Process('pwd');
 $process1->run();
 echo 'Output: ' . $process1->getOutput() . LF;
-echo 'Error Output: ' . $process1->getErrorOutput() . LF;
+//echo 'Error Output: ' . $process1->getErrorOutput() . LF;
 echo LF;
 
 echo 'Relative path:' . LF;
 $process2 = new \Symfony\Component\Process\Process('pwd', 'test2/');
 $process2->run();
 echo 'Output: ' . $process2->getOutput() . LF;
-echo 'Error Output: ' . $process2->getErrorOutput() . LF;
+//echo 'Error Output: ' . $process2->getErrorOutput() . LF;
 echo LF;
 
 echo 'Absolute path:' . LF;
 $process3 = new \Symfony\Component\Process\Process('pwd', realpath('test2/'));
 $process3->run();
 echo 'Output: ' . $process2->getOutput() . LF;
-echo 'Error Output: ' . $process2->getErrorOutput() . LF;
+//echo 'Error Output: ' . $process2->getErrorOutput() . LF;
 echo LF;
 
