@@ -1,0 +1,7 @@
+{
+    "name": "helhum/processtest",
+    "description": "Just testing symfony/process",
+    "require": {
+        "symfony/process": "~2.6"
+    }
+}
