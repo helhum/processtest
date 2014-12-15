@@ -1,7 +1,6 @@
 language: php
 
 php:
-  - 5.2
   - 5.3
   - 5.4
   - 5.5
@@ -14,6 +13,7 @@ notifications:
 before_script:
   - composer self-update
   - composer install
+  - cat test.php
 
 script:
   - php test.php
