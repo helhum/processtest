@@ -10,6 +10,12 @@ notifications:
   email:
     - helmut@typo3.org
 
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer
+
 before_script:
   - composer self-update
   - composer install
