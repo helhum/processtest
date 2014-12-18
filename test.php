@@ -7,7 +7,6 @@ chdir('test1');
 mkdir('test2');
 
 
-
 echo 'getcwd(): ' . getcwd() . LF;
 echo LF;
 echo 'Passed cwd: null' . LF;
