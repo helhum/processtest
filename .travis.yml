@@ -15,11 +15,10 @@ sudo: false
 cache:
   directories:
     - $HOME/.composer
-    - $HOME/bin
+    - $HOME/.phpenv/bin
 
 before_script:
-  - mkdir -p $HOME/bin; $PATH="$PATH:$HOME/bin"; export $PATH
-  - \[ -f "$HOME/bin/parallel" \] || wget http://git.savannah.gnu.org/cgit/parallel.git/plain/src/parallel && mv parallel $HOME/bin/ && chmod 755 $HOME/bin/parallel
+  - \[ -f "$HOME/.phpenv/bin/parallel" \] || wget http://git.savannah.gnu.org/cgit/parallel.git/plain/src/parallel && mv parallel $HOME/.phpenv/bin/ && chmod 755 $HOME/.phpenv/bin/parallel
   - parallel --help
   - composer self-update
   - composer install
