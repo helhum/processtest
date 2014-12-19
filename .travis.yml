@@ -18,8 +18,7 @@ cache:
     - $HOME/bin
 
 before_script:
-  - echo $PATH
-  - $PATH="$PATH:$HOME/bin"; export $PATH
+  - mkdir -p $HOME/bin; $PATH="$PATH:$HOME/bin"; export $PATH
   - \[ -f "$HOME/bin/parallel" \] || wget http://git.savannah.gnu.org/cgit/parallel.git/plain/src/parallel && mv parallel $HOME/bin/ && chmod 755 $HOME/bin/parallel
   - parallel --help
   - composer self-update
