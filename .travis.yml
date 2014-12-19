@@ -18,8 +18,8 @@ cache:
     - $HOME/bin
 
 before_script:
-  - \[ -f "$HOME/bin/parallel" \] || mkdir -p $HOME/bin && wget http://git.savannah.gnu.org/cgit/parallel.git/plain/src/parallel && mv parallel $HOME/bin/ && chmod 755 $HOME/bin/parallel
-  - parallel --help
+  - \[ -f "$HOME/bin/parallel" \] || mkdir -p $HOME/bin && wget http://git.savannah.gnu.org/cgit/parallel.git/plain/src/parallel && chmod 755 parallel && mv parallel $HOME/bin/
+  - $HOME/bin/parallel --help
   - composer self-update
   - composer install
   - cat test.php
